@@ -5,7 +5,6 @@ import React, {Component, PropTypes} from 'react'
 
 class Counter extends Component{
     incrementIfOdd() {
-        console.log(this.props.increment())
         if(this.props.value % 2 !== 0){
             this.props.increment()
         }
@@ -22,7 +21,7 @@ class Counter extends Component{
         return(
             <p>
                 Clicked: {value} times.
-                <button onClick={() => increment()}>+</button>
+                <button onClick={increment}>+</button>
                 <button onClick={decrement}>-</button>
                 <button onClick={this.incrementIfOdd.bind(this)}>Increment if odd</button>
                 <button onClick={this.incrementAsync.bind(this)}>Increment async</button>

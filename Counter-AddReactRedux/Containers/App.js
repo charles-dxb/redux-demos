@@ -22,10 +22,8 @@ App.propTypes = {
 }
 
 function mapStateToProps(state){
-    console.log('.........****')
-    console.log(state.value)
     return {
-        value : state.value || 0
+        value : state.value
     }
 } 
 
